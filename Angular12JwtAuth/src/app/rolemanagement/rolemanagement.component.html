@@ -5,7 +5,7 @@
                 <div class="col-md-12">
                     <div class="d-flex align-items-center text-center  ">
                         <div class="page-name">
-                            <h6>Currency Setting</h6>
+                            <h6>Role Management</h6>
                         </div>
                         <div class="ms-auto box-breadcrumb"> 
                             <ol class="breadcrumb">
@@ -17,12 +17,12 @@
                                         </svg>
                                     </a>
                                 </li> 
-                                <li class=" breadcrumb-item">
+                                <li class="breadcrumb-item">
                                     <a href="" class="mr-2">
-                                        Import
+                                        Masters
                                     </a>
                                 </li> 
-                                <li class="breadcrumb-item active">Currency Setting</li>
+                                <li class="breadcrumb-item active">Role Management</li>
                             </ol>
                         </div>
                     </div>
@@ -35,15 +35,15 @@
                 <div class="pus-card">
                     <div class="pus-card-header d-block d-md-flex align-items-center text-center justify-content-between">
                         <div class="pus-card-title">
-                            <h6>Currency List</h6>
+                            <h6>Role Management List</h6>
                         </div>
                         <div class="pus-card-heading-elements">
                             <ul class="list-inline mb-0">
                                  
                                 <li class="list-inline-item">
                                     <div class="toolbar-add">
-                                        <a href="javascript:void(0);" class="add-link table-button-white-hover" data-toggle="tooltip" data-placement="top" title="Add Port">
-                                            <img src="assets/images/table-icons/add.svg" class="img-fluid" alt="">
+                                        <a href="javascript:void(0);" class="add-link table-button-white-hover" data-toggle="tooltip" data-placement="top" title="Add Role">
+                                            <img src="assets/images/table-icons/add.svg" class="img-fluid" alt="">  
                                         </a>
                                     </div>
                                 </li>                                        
@@ -79,27 +79,24 @@
                                 <div class="table-responsive table-view">
                                     <table id="TableFeatures" class="table table-hovermb-0 display nowrap datatable" style="width:100%">
                                         <thead>
-                                            <tr>
-                                                <th>NO</th> 
-                                                <th>Country</th>
-                                                <th>Currency Name</th>
-                                                <th>Currency Full Name</th>
-                                                <th>Currency Short code </th>
-                                                <th>Currency Symbol</th> 
-                                                <th>Action</th> 
+                                            <tr> 
+                                                <th>No</th>
+                                                <th>Department</th> 
+                                                <th>Role</th>
+                                                <th width="100">Action</th> 
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>  
-                                                <td>Canada</td>
-                                                <td>Dollar</td>
-                                                <td>Canadian Dollar</td>
-                                                <td>CAD</td>
-                                                <td>$</td> 
+                                            <tr>  
+                                                <td>1</td>
+                                                <td>Account</td>
+                                                <td>
+                                                    <span class="me-1 badge rounded-pill bg-success">Bank</span> 
+                                                    <span class="me-1 badge rounded-pill bg-success">Document</span>
+                                                    <span class="me-1 badge rounded-pill bg-success">Clients</span> 
+                                                </td> 
                                                 <td> 
-                                                    <div class="table-action d-flex justify-content-start align-items-start">
-                                                        
+                                                    <div class="table-action d-flex justify-content-start align-items-start"> 
                                                         <div class="">
                                                             <a href="#" class="table-button-hover EditVendor" title="Edit">
                                                                 <i class="fa fa-edit"></i>
@@ -113,16 +110,42 @@
                                                     </div> 
                                                 </td> 
                                             </tr> 
-                                            <tr>
-                                                <td>1</td>  
-                                                <td>China</td>
-                                                <td>Yuan</td>
-                                                <td>Yuan</td>
-                                                <td>CNY</td>
-                                                <td>¥</td> 
+                                            <tr>  
+                                                <td>2</td>
+                                                <td>Masters</td>
+                                                <td>
+                                                    <span class="me-1 badge rounded-pill bg-success">License</span> 
+                                                    <span class="me-1 badge rounded-pill bg-success">Port</span>
+                                                    <span class="me-1 badge rounded-pill bg-success">Bank</span> 
+                                                    <span class="me-1 badge rounded-pill bg-success">Document</span> 
+                                                    <span class="me-1 badge rounded-pill bg-success">Clients</span>  
+                                                </td> 
                                                 <td> 
-                                                    <div class="table-action d-flex justify-content-start align-items-start">
-                                                        
+                                                    <div class="table-action d-flex justify-content-start align-items-start"> 
+                                                        <div class="">
+                                                            <a href="#" class="table-button-hover EditVendor" title="Edit">
+                                                                <i class="fa fa-edit"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="">
+                                                            <a href="" class="table-button-hover DeleteVendor" title="Delete" data-toggle="modal" data-target="#DeleteVendor">
+                                                                <i class="fa fa-trash"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div> 
+                                                </td> 
+                                            </tr>  
+                                            <tr>  
+                                                <td>3</td>
+                                                <td>Import</td>  
+                                                <td>
+                                                    <span class="me-1 badge rounded-pill bg-success">Account</span>  
+                                                    <span class="me-1 badge rounded-pill bg-success">Bank</span> 
+                                                    <span class="me-1 badge rounded-pill bg-success">Document</span> 
+                                                    <span class="me-1 badge rounded-pill bg-success">Clients</span>  
+                                                </td> 
+                                                <td> 
+                                                    <div class="table-action d-flex justify-content-start align-items-start"> 
                                                         <div class="">
                                                             <a href="#" class="table-button-hover EditVendor" title="Edit">
                                                                 <i class="fa fa-edit"></i>
@@ -136,16 +159,15 @@
                                                     </div> 
                                                 </td> 
                                             </tr> 
-                                            <tr>
-                                                <td>1</td>  
-                                                <td>India</td>
-                                                <td>Rupee</td>
-                                                <td>Indian Rupee</td>
-                                                <td>INR</td>
-                                                <td>₹</td> 
+                                            <tr>  
+                                                <td>4</td>
+                                                <td>Port</td>  
                                                 <td> 
-                                                    <div class="table-action d-flex justify-content-start align-items-start">
-                                                        
+                                                    <span class="me-1 badge rounded-pill bg-success">Document</span> 
+                                                    <span class="me-1 badge rounded-pill bg-success">Clients</span> 
+                                                </td> 
+                                                <td> 
+                                                    <div class="table-action d-flex justify-content-start align-items-start"> 
                                                         <div class="">
                                                             <a href="#" class="table-button-hover EditVendor" title="Edit">
                                                                 <i class="fa fa-edit"></i>
@@ -159,7 +181,7 @@
                                                     </div> 
                                                 </td> 
                                             </tr> 
-                                           
+                                                                                                   
                                         </tbody>
                                     </table> 
                                 </div>
@@ -170,7 +192,7 @@
             </div> 
         </div>
     </div>
-
+</div>
 <!-- page data area End -->
 
 
@@ -219,9 +241,9 @@
 <!-- Add Panel filter -->
 <!-- <div class="right-panel-add right-panel-wrapper">
 <div class="panel-overlay"></div>
-<div class="right-panel w-20">
+<div class="right-panel w-30">
     <div class="right-panel-head">
-        <h6 class="">Add Currency</h6>
+        <h6 class="">Create Role </h6>
         <a class="close-panel add-panel" href="javascript:void(0);">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify" data-icon="feather:chevron-right" style="vertical-align: -0.125em; transform: rotate(360deg);">
                 <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -235,199 +257,61 @@
             <div class="row"> 
                 <div class="col-md-12"> 
                     <div class="filters-scroll">
-                        <div class="row"> 
-                            <div class="col-md-12">
+                        <div class="row">
+                             
+                            <div class="col-md-12"> 
                                 <fieldset class="form-group">
-                                    <label class="form-lbl">Country Name <span class="text-danger">*</span></label>
-                                    <div class="headersearch">  
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value="">Select Country Name</option>
-                                        </select>
-                                    </div> 
-                                </fieldset> 
-                            </div>
-                            <div class="col-md-12">
-                                <fieldset class="form-group">
-                                    <label class="form-lbl">Currency Name <span class="text-danger">*</span></label> 
+                                    <label class="form-lbl">Select Department <span class="text-danger">*</span></label>
                                     <div class="headersearch"> 
                                         <select name="" id="input" class="form-control" required="required">
-                                            <option value="">Select Currency Name</option>
+                                            <option value="">Account</option>
                                         </select>
                                     </div> 
-                                </fieldset> 
+                                </fieldset>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-12"> 
                                 <fieldset class="form-group">
-                                    <label class="form-lbl">Currency Full Number <span class="text-danger">*</span></label> 
-                                    <div class="headersearch"> 
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value="">Select Currency  Full Number</option>
-                                        </select>
-                                    </div> 
-                                </fieldset> 
+                                    <label class="form-lbl">Assign Role to Department <span class="text-danger">*</span></label>
+
+                                    <div class="grid-2 form-grid-2 Departmentlist-checkbox">
+                                        <div class="form-grid-list"> 
+                                            <label class="">
+                                                <input type="checkbox" checked=""> 
+                                                <span>Bank</span>
+                                            </label>
+                                        </div> 
+                                        <div class="form-grid-list"> 
+                                            <label class="">
+                                                <input type="checkbox" checked=""> 
+                                                <span>Import</span>
+                                            </label>
+                                        </div>  
+                                        <div class="form-grid-list"> 
+                                            <label class="">
+                                                <input type="checkbox" checked=""> 
+                                                <span>Export</span>
+                                            </label>
+                                        </div> 
+                                        <div class="form-grid-list"> 
+                                            <label class="">
+                                                <input type="checkbox" checked=""> 
+                                                <span>letter of credit</span>
+                                            </label>
+                                        </div>                                                    
+                                    </div>
+                                </fieldset>
                             </div>
-                            <div class="col-md-12">
-                                <fieldset class="form-group">
-                                    <label class="form-lbl">Currency Short code <span class="text-danger">*</span></label>
-                                    <div class="headersearch"> 
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value="">Select Currency  Short code</option>
-                                        </select>
-                                    </div> 
-                                </fieldset> 
-                            </div>
-                            <div class="col-md-12">
-                                <fieldset class="form-group">
-                                    <label class="form-lbl">Currency Symbole <span class="text-danger">*</span></label>
-                                    <div class="headersearch"> 
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value="">Select Country Symbole</option>
-                                        </select>
-                                    </div> 
-                                </fieldset> 
-                            </div> 
-                        </div>   
+                             
+                        </div> 
                     </div>
                 </div>
                 <div class="col-md-12 text-center mt-3"> 
                     <div class="d-flex justify-content-center align-items-center"> 
-                        <a class="button-style ml-2" href=""> Add Currency</a>
+                        <a class="button-style ml-2" href=""> Create Role</a>
                     </div>
                 </div>
             </div>
         </div>                
     </div>
 </div>
-</div>   -->
-
-<!-- Right Panel Customize Table -->
-<div class="right-panel-customizetable right-panel-wrapper">
-<div class="panel-overlay"></div>
-<div class="right-panel">
-    <div class="right-panel-head">
-        <h6>Table Setting</h6>
-        <a class="customizetable-panel flags-panel" href="javascript:void(0);">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify" data-icon="feather:chevron-right" style="vertical-align: -0.125em; transform: rotate(360deg);">
-                <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 18l6-6l-6-6"></path>
-                </g>
-            </svg>
-        </a>
-    </div> 
-    <div class="right-panel-body">
-        <div class="right-filters">
-            <div class="row"> 
-                <div class="col-md-12"> 
-                    <div class="filters-scroll">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="mb-10">
-                                    <label class="m-0">
-                                        <input type="checkbox" value="">
-                                        All
-                                    </label>
-                                </div> 
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-10">
-                                    <label class="m-0">
-                                        <input type="checkbox" value="" checked="">
-                                        Category
-                                    </label>
-                                </div> 
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-10">
-                                    <label class="m-0">
-                                        <input type="checkbox" value="" checked="">
-                                        Sub Category
-                                    </label>
-                                </div> 
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-10">
-                                    <label class="m-0">
-                                        <input type="checkbox" value="" checked="">
-                                        Vendor
-                                    </label>
-                                </div> 
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-10">
-                                    <label class="m-0">
-                                        <input type="checkbox" value="" checked="">
-                                        Vendor Country
-                                    </label>
-                                </div> 
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-10">
-                                    <label class="m-0">
-                                        <input type="checkbox" value="">
-                                        Vendor State
-                                    </label>
-                                </div> 
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-10">
-                                    <label class="m-0">
-                                        <input type="checkbox" value="" checked="">
-                                        Vendor City
-                                    </label>
-                                </div> 
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-10">
-                                    <label class="m-0">
-                                        <input type="checkbox" value="" checked="">
-                                        Vendor Zip Code
-                                    </label>
-                                </div> 
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-10">
-                                    <label class="m-0">
-                                        <input type="checkbox" value="" checked="">
-                                        Vendor Currency
-                                    </label>
-                                </div> 
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-10">
-                                    <label class="m-0">
-                                        <input type="checkbox" value="">
-                                        Vendor Quantity
-                                    </label>
-                                </div> 
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-10">
-                                    <label class="m-0">
-                                        <input type="checkbox" value="">
-                                        Approx Date
-                                    </label>
-                                </div> 
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-10">
-                                    <label class="m-0">
-                                        <input type="checkbox" value="">
-                                        Action
-                                    </label>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 text-center mt-3">  
-                    <div class="d-flex justify-content-center align-items-center"> 
-                        <a class="button-style ml-2" href="">Save</a>
-                    </div>
-                </div>
-            </div>
-        </div>                
-    </div>
-</div>
-</div>  
-
-</div>
+</div>  -->

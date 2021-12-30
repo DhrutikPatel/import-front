@@ -55,6 +55,8 @@ import { ThirdpartyinspectionComponent } from './imports/thirdpartyinspection/th
 
 
 import { VesseltrackingComponent } from './vesseltracking/vesseltracking.component';
+import { RolemanagementComponent } from './rolemanagement/rolemanagement.component';
+import { ClientsComponent } from './clients/clients.component';
 
 // import { TableComponent } from './table/table.component';
 // import { AddformComponent } from './addform/addform.component';
@@ -99,6 +101,8 @@ import { VesseltrackingComponent } from './vesseltracking/vesseltracking.compone
     
 
     VesseltrackingComponent,
+    RolemanagementComponent,
+    ClientsComponent
     // AddformComponent,          //Form for Import
     // TableComponent,            // To show dashboard table 
   ],

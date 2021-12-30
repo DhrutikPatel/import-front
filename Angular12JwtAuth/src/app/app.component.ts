@@ -22,7 +22,8 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
-   
+     this.isLoggedIn = true;
+     
     if (this.isLoggedIn) {
       const user = this.tokenStorageService.getUser();
       this.roles = user.roles;
