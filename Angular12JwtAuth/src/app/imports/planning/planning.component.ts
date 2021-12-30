@@ -22,25 +22,33 @@ export class PlanningComponent implements OnInit {
     quantity: null,
     date: null
   }
+
+  addVendor : any = {
     
-    constructor() {    
-      // this.LogoPath = "./assets/Images/logo_icon.png"
-      // this.NamePath = "./assets/Images/logo.png"
-      // this.NotificationImg = "./assets/Images/headericon/notification.png";
-      // this.MessageImg = "./assets/Images/headericon/message.png";
-      this.LogoPath = ""
-      this.NamePath = ""
-      this.NotificationImg = "";
-      this.MessageImg = "";
-    }
-     
+  }
     
-    onSubmit(){
+  constructor() {    
+    // this.LogoPath = "./assets/Images/logo_icon.png"
+    // this.NamePath = "./assets/Images/logo.png"
+    // this.NotificationImg = "./assets/Images/headericon/notification.png";
+    // this.MessageImg = "./assets/Images/headericon/message.png";
+    this.LogoPath = ""
+    this.NamePath = ""
+    this.NotificationImg = "";
+    this.MessageImg = "";
+  }
+  
+  ngOnInit(): void {
+  }
+  
+  onSubmit(){
     const { category,subcategory,name,type,state,city,zipcode,currency,quantity,date} = this.form;
     console.log(this.form);    
   }
-      
-  ngOnInit(): void {
+  
+  nonNeg(value : Number){
+    console.log(value);
+    return (value > 0);
   }
-
+    
 }
