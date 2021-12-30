@@ -275,4 +275,8 @@ NOTE: This file contains all scripts for the actual Template.
 })(jQuery);
 
 
+$(document).ready(function() {
+    $('.select2').select2(); //initialize 
+});
+
 

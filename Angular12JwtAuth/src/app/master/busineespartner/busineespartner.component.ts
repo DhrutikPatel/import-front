@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusineespartnerComponent implements OnInit {
 
-  customer = true;
+  customer = false;
 
   constructor() { }
 

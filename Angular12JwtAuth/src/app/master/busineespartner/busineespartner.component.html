@@ -42,12 +42,12 @@
                         <div class="pus-card-heading-elements">
                             <ul class="list-inline mb-0"> 
                                 <li class="list-inline-item">
-                                    <a href="javascript:void(0);" class="table-button-white-hover" data-toggle="tooltip" data-placement="top" title="Reset">
+                                    <a href="javascript:void(0);" class="table-button-white-hover" data-bs-toggle="tooltip" data-bs-placement="top" title="Reset">
                                         <img src="assets/images/table-icons/reset.svg" class="img-fluid" alt="">
                                     </a>
                                 </li>
                                 <!-- <li class="list-inline-item">
-                                    <a href="javascript:void(0);" class="table-button-white-hover" data-toggle="tooltip" data-placement="top" title="Save">
+                                    <a href="javascript:void(0);" class="table-button-white-hover" data-bs-toggle="tooltip" data-bs-placement="top" title="Save">
                                         <img src="assets/images/table-icons/save.svg" class="img-fluid" alt="">
                                     </a>
                                 </li>  -->
@@ -61,15 +61,21 @@
                                     <div class="tabs-po">
                                         <ul class="list-line box-po-tabs">
                                             <li class="list-inline-item">
-                                                <a class="po-tabs-active" data-bind="Customer"
+                                                <a class="" data-bs-bind="Customer"
                                                   (click)="toggleCustomer()"
+                                                  [ngClass]="{
+                                                    'po-tabs-active' : customer
+                                                  }"
                                                 >
                                                   Customer
                                                 </a>
                                             </li>
                                             <li class="list-inline-item">
-                                                <a class="" data-bind="Vendor"
+                                                <a class="" data-bs-bind="Vendor"
                                                   (click)="toggleVendor()"
+                                                  [ngClass]="{
+                                                    'po-tabs-active' : !customer
+                                                  }"
 
                                                 >
                                                   Vendor
@@ -78,7 +84,10 @@
                                         </ul>
                                     </div>
                                     <div class="tabs-details-po">
-                                        <div id="Customer" class="details-po details-po-active"
+                                        <div id="Customer" class="details-po"
+                                            [ngClass]="{
+                                                'details-po-active' : customer
+                                            }"
                                             
                                         >
                                             <div class="">
@@ -122,15 +131,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="Vendor" class="details-po details-po-active"
-                                            
+                                        <div id="Vendor" class="details-po"
+                                            [ngClass]="{
+                                                'details-po-active' : !customer
+                                            }"
                                         >
                                             <div class="">
                                                 <div class="grid-4 form-grid-4">
                                                     <div class="form-grid-list">
                                                         <fieldset class="form-group ">
-                                                            <label class="form-lbl">Select Category  <span class="text-danger">*</span></label>
-                                                            <select name="" class="form-control">
+                                                            <label class="form-lbl">Select Category  <span class="text-danger">*</span></label>                                                            
+                                                            <select name="" class="form-select form-control">
                                                                 <option value="" selected="">Select Category</option>
                                                                 <option value="">Food</option>
                                                                 <option value="">Electronic</option>
@@ -141,7 +152,7 @@
                                                     <div class="form-grid-list">
                                                         <fieldset class="form-group">
                                                             <label class="form-lbl">Select Sub Category  <span class="text-danger">*</span></label>
-                                                            <select name="" class="form-control">
+                                                            <select name="" class="form-select form-control">
                                                                 <option value="">Select Sub Category</option>
                                                                 <option value="">Mango </option>
                                                                 <option value="">Orange</option>
@@ -160,14 +171,14 @@
                                                         <fieldset class="form-group ">
                                                             <label class="form-lbl">Select Vendor  <span class="text-danger">*</span></label>
                                                             <div class="select-vendors">
-                                                                <select name="" class="form-control select-select2">
+                                                                <select name="" class="form-select form-control select2 select2-hidden-accessible">
                                                                     <option value="">Select Vendor</option>
                                                                     <option value="">Vendor Name One </option>
                                                                     <option value="">Vendor Name Two</option>
                                                                     <option value="">Vendor Name Three</option> 
                                                                 </select>
                                                                 <div class="toolbar-filter">
-                                                                    <a href="javascript:void(0);" class="add-vendors toolbar-link-filter" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add Vendor">
+                                                                    <a href="javascript:void(0);" class="add-vendors toolbar-link-filter" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Add Vendor">
                                                                         <img src="assets/images/table-icons/add.svg" class="img-fluid" alt="">
                                                                     </a>
                                                                 </div>                                    
@@ -201,7 +212,7 @@
                                                     <div class="form-grid-list">
                                                         <div class="form-group">
                                                             <label class="form-lbl" for=""> Currency <span class="text-danger">*</span></label>
-                                                            <select name="" class="form-control select-select2">
+                                                            <select name="" class="form-select form-control select2 select2-hidden-accessible">
                                                                 <option value="">Select Currency</option>
                                                                 <option value="">INR </option>
                                                                 <option value="">Dollar</option>
@@ -219,7 +230,7 @@
                                                         <fieldset class="form-group">
                                                             <label class="form-lbl">Approx Date  <span class="text-danger">*</span></label>
                                                             <div class="headersearch">
-                                                                <input type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-date-format="mm/dd/yyyy">
+                                                                <input type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-bs-date-format="mm/dd/yyyy">
                                                                
                                                             </div>
                                                         </fieldset> 
@@ -263,7 +274,7 @@
         <div class="right-panel-head">
             <h6 class="text-color">Add Vendor</h6>
             <a class="close-panel flags-panel" href="javascript:void(0);">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify" data-icon="feather:chevron-right" style="vertical-align: -0.125em; transform: rotate(360deg);">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify" data-bs-icon="feather:chevron-right" style="vertical-align: -0.125em; transform: rotate(360deg);">
                     <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M9 18l6-6l-6-6"></path>
                     </g>
