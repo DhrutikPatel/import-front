@@ -39,8 +39,8 @@ import { ThirdpartyinspectionComponent } from './imports/thirdpartyinspection/th
 
 
 import { VesseltrackingComponent } from './vesseltracking/vesseltracking.component';
-
-
+import {RolemanagementComponent } from './rolemanagement/rolemanagement.component';
+import {ClientsComponent} from './clients/clients.component';
 // import { AddformComponent } from './addform/addform.component';
 // import { TableComponent } from './table/table.component';
 
@@ -66,6 +66,8 @@ const routes: Routes = [
   {path: 'master-busineespartner',component: BusineespartnerComponent},
   {path: 'master-bank', component: BankComponent},
   {path: 'master-document', component: DocumentComponent},
+  {path: 'master-rolemanagement',component: RolemanagementComponent },
+  {path: 'master-clients', component: ClientsComponent},
   // ------------------------------------------------------IMPORT ROUTERS-----------------------------------------------------------//
   {path: 'import-planning', component: PlanningComponent},
   {path: 'import-vendor', component: VendorComponent},
@@ -80,8 +82,8 @@ const routes: Routes = [
 
 
   // -----------------------------------------------------------------------------------------------------------------------------//
-  {path: 'vesseltracking', component: VesseltrackingComponent}
-
+  {path: 'vesseltracking', component: VesseltrackingComponent},
+ 
   // {path: 'addform', component: AddformComponent},
   // {path: 'table', component: TableComponent}    
 ];
