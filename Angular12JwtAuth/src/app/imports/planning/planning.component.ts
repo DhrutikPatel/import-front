@@ -15,17 +15,37 @@ export class PlanningComponent implements OnInit {
     subcategory: null,
     name: null,
     type:null,
+    country: null,
     state: null,
     city: null,
     zipcode: null,
     currency: null,
     quantity: null,
     date: null
-  }
+  };
 
   addVendor : any = {
-    
-  }
+    companyName: null,
+    companyEmail: null,
+    companyMobile: null,
+    website: null,
+    address1: null,
+    address2: null,
+    vendorCountry: null,
+    vendorState: null,
+    vendorCity: null,
+    vendorZipCode: null,
+    hsmItem: null,
+    hsmCode: null,
+    gstNumber: null,
+    ieCode: null,
+    bankName: null,
+    bankCode: null,
+    vendorName: null,
+    vendorEmail: null,
+    vendorMobile: null,
+    gstDocument: null
+  };
     
   constructor() {    
     // this.LogoPath = "./assets/Images/logo_icon.png"
@@ -44,6 +64,10 @@ export class PlanningComponent implements OnInit {
   onSubmit(){
     const { category,subcategory,name,type,state,city,zipcode,currency,quantity,date} = this.form;
     console.log(this.form);    
+  }
+
+  onSubmitVendor(){
+    console.log(this.addVendor);
   }
   
   nonNeg(value : Number){

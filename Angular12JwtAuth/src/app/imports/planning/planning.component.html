@@ -134,8 +134,8 @@
                                             <div class="form-grid-list">
                                                 <div class="form-group">
                                                     <label class="form-lbl" for=""> Vendor Zip/Postal Code <span class="text-danger">*</span></label>
-                                                    <input [(ngModel)]="form.zipcode" #zipcode="ngModel"  name="zipcode"  type="text" class="form-control" placeholder="City" required>  
-                                                    <div *ngIf="zipcode.invalid && zipcode.touched" class="alert-danger Fild-box-Error">Zip Code is required</div>                                                       
+                                                    <input [(ngModel)]="addVendor.zipcode" #zipcode="ngModel" name="zipcode" type="text" class="form-control" placeholder="Zip Code" required>  
+                                                    <div *ngIf="zipcode.invalid && zipcode.touched" class="alert-danger Fild-box-Error">Zip Code is required</div>
                                                 </div>
                                             </div> 
                                             <div class="form-grid-list">
@@ -210,7 +210,7 @@
             </div>
             <div class="right-panel-body">
                 <div class="right-filters">
-                    <form>
+                    <form #addVendorForm="ngForm" name="addVendor" (ngSubmit)="onSubmitVendor()">
                         <div class="row"> 
                             <div class="col-md-12"> 
                                 <div class="filters-scroll">
@@ -223,15 +223,17 @@
                                                 <fieldset class="form-group">
                                                     <label class="form-lbl">Company Name <span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Company Name" required="required"> 
+                                                        <input [(ngModel)]="addVendor.companyName" #companyName="ngModel" name="companyName" type="text" class="form-control" placeholder="Company Name" required>
+                                                        <div *ngIf="companyName.invalid && companyName.touched" class="alert-danger ">Company name is required</div>
                                                     </div> 
                                                 </fieldset> 
                                             </div>
                                             <div class="form-grid-list">
                                                 <fieldset class="form-group">
-                                                    <label class="form-lbl">Compnay Email <span class="text-danger">*</span></label>
+                                                    <label class="form-lbl">Company Email <span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter compnay email" required="required"> 
+                                                        <input [(ngModel)]="addVendor.companyEmail" #companyEmail="ngModel" name="companyEmail" type="text" class="form-control" placeholder="Enter compnay email" required> 
+                                                        <div *ngIf="companyEmail.invalid && companyEmail.touched" class="alert-danger ">Company email is required</div>
                                                     </div>
                                                 </fieldset> 
                                             </div> 
@@ -242,20 +244,22 @@
                                                     <input 
                                                         type="text"
                                                         class="form-control"
-                                                        [(ngModel)]="form.mobile"
-                                                        name="mobile"
-                                                        #mobile="ngModel"
-                                                        required                                            
+                                                        [(ngModel)]="addVendor.companyMobile"
+                                                        #companyMobile="ngModel"
+                                                        name="companyMobile"
                                                         ng2TelInput
                                                         [ng2TelInputOptions]="{initialCountry: 'in'}"
+                                                        required                                            
                                                     />
+                                                    <div *ngIf="companyMobile.invalid && companyMobile.touched" class="alert-danger ">Company mobile is required</div>
                                                 </fieldset>
                                             </div> 
                                             <div class="form-grid-list grid-column1">
                                                 <fieldset class="form-group ">
-                                                    <label class="form-lbl">Compnay Website <span class="text-danger">*</span></label>
+                                                    <label class="form-lbl">Company Website <span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter compnay website" required="required"> 
+                                                        <input [(ngModel)]="addVendor.website" #website="ngModel" name="website" type="text" class="form-control" placeholder="Enter compnay website" required> 
+                                                        <div *ngIf="website.invalid && website.touched" class="alert-danger ">Website is required</div>                                                        
                                                     </div>
                                                 </fieldset> 
                                             </div> 
@@ -263,7 +267,8 @@
                                                 <fieldset class="form-group">
                                                     <label class="form-lbl">Address Line 1 <span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter address line 1" required="required"> 
+                                                        <input [(ngModel)]="addVendor.address1" #address1="ngModel" name="address1" type="text" class="form-control" placeholder="Enter address line 1" required> 
+                                                        <div *ngIf="address1.invalid && address1.touched" class="alert-danger ">Address is required</div>
                                                     </div>
                                                 </fieldset> 
                                             </div>
@@ -271,7 +276,7 @@
                                                 <fieldset class="form-group">
                                                     <label class="form-lbl">Address Line 2 </label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter address line 2" required="required"> 
+                                                        <input [(ngModel)]="addVendor.address2" #address2="ngModel" name="address2" type="text" class="form-control" placeholder="Enter address line 2" required> 
                                                     </div>
                                                 </fieldset> 
                                             </div>
@@ -279,7 +284,8 @@
                                                 <fieldset class="form-group">
                                                     <label class="form-lbl">Country <span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter Country" required="required"> 
+                                                        <input [(ngModel)]="addVendor.vendorCountry" #vendorCountry="ngModel" name="vendorCountry" type="text" class="form-control" placeholder="Enter Country" required> 
+                                                        <div *ngIf="vendorCountry.invalid && vendorCountry.touched" class="alert-danger ">Country is required</div>
                                                     </div>
                                                 </fieldset> 
                                             </div>
@@ -287,7 +293,8 @@
                                                 <fieldset class="form-group">
                                                     <label class="form-lbl">State <span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter State" required="required"> 
+                                                        <input [(ngModel)]="addVendor.vendorState" #vendorState="ngModel" name="vendorState" type="text" class="form-control" placeholder="Enter State" required> 
+                                                        <div *ngIf="vendorState.invalid && vendorState.touched" class="alert-danger ">State is required</div>
                                                     </div>
                                                 </fieldset> 
                                             </div>
@@ -295,15 +302,17 @@
                                                 <fieldset class="form-group">
                                                     <label class="form-lbl">City <span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter City" required="required"> 
+                                                        <input [(ngModel)]="addVendor.vendorCity" #vendorCity="ngModel" name="vendorCity" type="text" class="form-control" placeholder="Enter City" required> 
+                                                        <div *ngIf="vendorCity.touched && vendorCity.invalid" class="alert-danger ">City is required</div>
                                                     </div>
                                                 </fieldset> 
                                             </div>
                                             <div class="form-grid-list">
                                                 <fieldset class="form-group">
                                                     <label class="form-lbl">Zip/Postal Code <span class="text-danger">*</span></label>
-                                                    <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter Zip/Postal Code" required="required"> 
+                                                    <div class="headersearch">
+                                                        <input [(ngModel)]="addVendor.vendorZipCode" #vendorZipCode="ngModel" name="vendorZipCode" type="text" class="form-control" placeholder="Enter Zip/Postal Code" required> 
+                                                        <div *ngIf="vendorZipCode.invalid && vendorZipCode.touched" class="alert-danger ">Zip/Postal Code is required</div>
                                                     </div>
                                                 </fieldset> 
                                             </div> 
@@ -311,7 +320,8 @@
                                                 <fieldset class="form-group ">
                                                     <label class="form-lbl">HSM Items <span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter HSM Items" required="required"> 
+                                                        <input [(ngModel)]="addVendor.hsmItem" #hsmItem="ngModel" name="hsmItem" type="text" class="form-control" placeholder="Enter HSM Items" required> 
+                                                        <div *ngIf="hsmItem.invalid && hsmItem.touched" class="alert-danger ">HSM Items is required</div>
                                                     </div>
                                                 </fieldset> 
                                             </div> 
@@ -319,7 +329,8 @@
                                                 <fieldset class="form-group ">
                                                     <label class="form-lbl">HSM Code <span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter HSM Code" required="required"> 
+                                                        <input [(ngModel)]="addVendor.hsmCode" #hsmCode="ngModel" name="hsmCode" type="text" class="form-control" placeholder="Enter HSM Code" required> 
+                                                        <div *ngIf="hsmCode.invalid && hsmCode.touched" class="alert-danger ">HSM Code is required</div>
                                                     </div>
                                                 </fieldset> 
                                             </div> 
@@ -327,7 +338,8 @@
                                                 <fieldset class="form-group ">
                                                     <label class="form-lbl">GST Number <span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter GST Number" required="required"> 
+                                                        <input [(ngModel)]="addVendor.gstNumber" #gstNumber="ngModel" name="gstNumber" type="text" class="form-control" placeholder="Enter GST Number" required> 
+                                                        <div *ngIf="gstNumber.invalid && gstNumber.touched" class="alert-danger ">GST number is required</div>
                                                     </div>
                                                 </fieldset> 
                                             </div> 
@@ -335,7 +347,8 @@
                                                 <fieldset class="form-group ">
                                                     <label class="form-lbl">IE Code <span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter IE Code" required="required"> 
+                                                        <input [(ngModel)]="addVendor.ieCode" #ieCode="ngModel" name="ieCode" type="text" class="form-control" placeholder="Enter IE Code" required> 
+                                                        <div *ngIf="ieCode.invalid && ieCode.touched" class="alert-danger ">IE code is required</div>
                                                     </div>
                                                 </fieldset> 
                                             </div> 
@@ -343,7 +356,8 @@
                                                 <fieldset class="form-group">
                                                     <label class="form-lbl">Bank Name<span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter Bank Name" required="required"> 
+                                                        <input [(ngModel)]="addVendor.bankName" #bankName="ngModel" name="bankName" type="text" class="form-control" placeholder="Enter Bank Name" required> 
+                                                        <div *ngIf="bankName.invalid && bankName.touched" class="alert-danger ">Bank name is required</div>
                                                     </div>
                                                 </fieldset> 
                                             </div> 
@@ -351,7 +365,8 @@
                                                 <fieldset class="form-group">
                                                     <label class="form-lbl">Bank Code<span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter Bank Code" required="required"> 
+                                                        <input [(ngModel)]="addVendor.bankCode" #bankCode="ngModel" name="bankCode" type="text" class="form-control" placeholder="Enter Bank Code" required> 
+                                                        <div *ngIf="bankCode.invalid && bankCode.touched" class="alert-danger ">Bank code is required</div>
                                                     </div>
                                                 </fieldset> 
                                             </div> 
@@ -366,7 +381,8 @@
                                                 <fieldset class="form-group">
                                                     <label class="form-lbl">Name <span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter name" required="required"> 
+                                                        <input [(ngModel)]="addVendor.vendorName" #vendorName="ngModel" name="vendorName" type="text" class="form-control" placeholder="Enter name" required> 
+                                                        <div *ngIf="vendorName.invalid && vendorName.touched" class="alert-danger ">Name is required</div>
                                                     </div> 
                                                 </fieldset> 
                                             </div>
@@ -374,7 +390,8 @@
                                                 <fieldset class="form-group">
                                                     <label class="form-lbl">Email <span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
-                                                        <input type="text" class="form-control" placeholder="Enter Email" required="required"> 
+                                                        <input [(ngModel)]="addVendor.vendorEmail" #vendorEmail="ngModel" name="vendorEmail" type="text" class="form-control" placeholder="Enter Email" required> 
+                                                        <div *ngIf="vendorEmail.invalid && vendorEmail.touched" class="alert-danger ">Email is required</div>
                                                     </div> 
                                                 </fieldset> 
                                             </div>
@@ -385,13 +402,14 @@
                                                     <input 
                                                         type="text"
                                                         class="form-control"
-                                                        [(ngModel)]="form.mobile"
-                                                        name="mobile"
-                                                        #mobile="ngModel"
-                                                        required                                            
+                                                        [(ngModel)]="addVendor.vendorMobile"
+                                                        #vendorMobile="ngModel"
+                                                        name="vendorMobile"
                                                         ng2TelInput
                                                         [ng2TelInputOptions]="{initialCountry: 'in'}"
+                                                        required                                            
                                                     />
+                                                    <div *ngIf="vendorMobile.invalid && vendorMobile.touched" class="alert-danger ">Mobile number is required</div>
                                                 </fieldset>
                                             </div> 
                                             
@@ -408,7 +426,8 @@
                                                 <fieldset class="form-group">
                                                     <label class="form-lbl">GST <span class="text-danger">*</span></label> 
                                                     <div class="headersearch custom-file"> 
-                                                        <input class="form-control custom-file-input" id="inputGroupFile04" type="file">
+                                                        <input [(ngModel)]="addVendor.gstDocument" #gstDocument="ngModel" name="gstDocument" class="form-control custom-file-input" id="inputGroupFile04" type="file">
+                                                        <div *ngIf="!gstDocument.dirty && gstDocument.touched" class="alert-danger ">GST documents is required</div>
                                                         <label class="custom-file-label" for="inputGroupFile04">Select Documents</label> 
                                                     </div>
                                                 </fieldset> 
@@ -419,10 +438,10 @@
                             </div>
                             <div class="col-md-12 text-center mt-3"> 
                                 <div class="d-flex justify-content-center align-items-center"> 
-                                    <a class="button-style ml-2" routerLink="/import-planning">
-                                        <img src="assets/images/table-icons/add.svg" class="img-fluid icon-filter-white mr-2" width="14px" alt="">
+                                    <button type="submit" class="button-style ml-2" routerLink="/import-planning">
+                                        <img src="assets/images/table-icons/add.svg" class="img-fluid icon-filter-white me-2" width="14px" alt="">
                                         Add Vendor
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>

@@ -7,9 +7,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusineespartnerComponent implements OnInit {
 
-  customer = false;
+  customer = true;
+
+  addVendor : any = {
+    companyName: null,
+    companyEmail: null,
+    companyMobile: null,
+    website: null,
+    address1: null,
+    address2: null,
+    vendorCountry: null,
+    vendorState: null,
+    vendorCity: null,
+    vendorZipCode: null,
+    hsmItem: null,
+    hsmCode: null,
+    gstNumber: null,
+    ieCode: null,
+    bankName: null,
+    bankCode: null,
+    vendorName: null,
+    vendorEmail: null,
+    vendorMobile: null,
+    gstDocument: null
+  };
 
   constructor() { }
+  ngOnInit(): void {
+  }
 
   toggleCustomer(){
     this.customer = true;
@@ -32,7 +57,8 @@ export class BusineespartnerComponent implements OnInit {
     console.log(this.form);  
   }
 
-  ngOnInit(): void {
-  }
+  onSubmitVendor(){
+    console.log(this.addVendor);
+  } 
 
 }
