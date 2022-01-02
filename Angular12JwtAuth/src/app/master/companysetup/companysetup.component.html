@@ -1,5 +1,5 @@
 <!-- page data area start -->
-<form  #planningForm="ngForm" name="form" (ngSubmit)="onSubmit()"> 
+<form  #companysetupForm="ngForm" name="form" (ngSubmit)="onSubmit()"> 
 <div class="pt-80 leftmargin">
     <div class="container-fluid ">
         <div class="page-navigation">
@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="form-grid-list">
                                         <fieldset class="form-group">
-                                            <label class="form-lbl">Compnay Email <span class="text-danger">*</span></label>
+                                            <label class="form-lbl">Company Email <span class="text-danger">*</span></label>
                                             <div class="headersearch"> 
                                                 <input [(ngModel)]="form.email" #email="ngModel" type="text" class="form-control" name="email" placeholder="Enter compnay email" required> 
                                                 <div *ngIf="email.invalid && email.touched" class="alert-danger ">Email is required</div> 
@@ -92,7 +92,7 @@
                                         <fieldset class="form-group ">
                                             <label class="form-lbl">Company Website <span class="text-danger">*</span></label>
                                             <div class="headersearch"> 
-                                                <input [(ngModel)]="form.website " #website="ngModel" type="text" name="website" class="form-control" placeholder="Enter compnay website" required> 
+                                                <input [(ngModel)]="form.website " #website="ngModel" type="text" name="website" class="form-control" placeholder="Enter company website" required> 
                                                 <div *ngIf="website.invalid && website.touched" class="alert-danger ">Website is required</div>   
                                             </div>
                                         </fieldset> 
@@ -158,11 +158,11 @@
                                 
                             </div>
                             <div class="col-md-12">
-                                <div class="text-center mt-3">
-                                    <a href="#" class="button-style ">Submit</a>
+                                <div class="text-center mt-3">    
+                                    <button type="submit" class="button-style ">Submit</button>
                                 </div>
                             </div>
-                        </div>
+                        </div>    
                     </div>
                 </div>  
             </div> 
