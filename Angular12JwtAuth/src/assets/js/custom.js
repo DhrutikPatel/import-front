@@ -174,6 +174,8 @@ NOTE: This file contains all scripts for the actual Template.
         PUS.customizetable(), // Customize Table
         PUS.add() // add
 
+        $('.select2').select2(); //initialize of select2
+
         
         // Collapsible Card
         // $('a[data-action="collapse"]').on('click', function (e) {
@@ -291,9 +293,6 @@ NOTE: This file contains all scripts for the actual Template.
 	}); 
 })(jQuery);
 
-
 // $(document).ready(function() {
-//     $('.select2').select2(); //initialize 
+    
 // });
-
-

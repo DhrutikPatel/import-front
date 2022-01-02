@@ -63,7 +63,7 @@
                                             <div class="form-grid-list">
                                                 <fieldset class="form-group ">
                                                     <label class="form-lbl">Select Category  <span class="text-danger">*</span></label>
-                                                    <select [(ngModel)]="form.category" #category="ngModel"  name="category"  name="" class="form-control" required>
+                                                    <select [(ngModel)]="form.category" #category="ngModel"  name="category"  name="" class="form-control form-select" required>
                                                         <option value="" selected="">Select Category</option>
                                                         <option value="Food">Food</option>
                                                         <option value="Electronic">Electronic</option>
@@ -75,7 +75,7 @@
                                             <div class="form-grid-list">
                                                 <fieldset class="form-group">
                                                     <label class="form-lbl">Select Sub Category  <span class="text-danger">*</span></label>
-                                                    <select  [(ngModel)]="form.subcategory" #subcategory="ngModel"  name="subcategory"   class="form-control" required>
+                                                    <select  [(ngModel)]="form.subcategory" #subcategory="ngModel"  name="subcategory"   class="form-control form-select" required>
                                                         <option >Select Sub Category</option>
                                                         <option value="Mango">Mango </option>
                                                         <option value="Orange">Orange</option>
@@ -95,13 +95,13 @@
                                                 <fieldset class="form-group ">
                                                     <label class="form-lbl">Select Vendor  <span class="text-danger">*</span></label>
                                                     <div class="select-vendors">
-                                                        <select  [(ngModel)]="form.type" #type="ngModel"  name="type"  class="form-control select2 select2-hidden-accessible" required>
+                                                        <select  [(ngModel)]="form.type" #type="ngModel"  name="type"  class="form-control form-select select2 select2-hidden-accessible" required>
                                                             <option value="">Select Vendor</option>
                                                             <option value="Vendor Name One">Vendor Name One </option>
                                                             <option value="Vendor Name Two">Vendor Name Two</option>
                                                             <option value="Vendor Name Three">Vendor Name Three</option> 
                                                         </select>
-                                                        <div *ngIf="type.invalid && type.touched" class="alert-danger ">Vendor type is required</div> 
+                                                        <!-- <div *ngIf="type.invalid && type.touched" class="alert-danger ">Vendor type is required</div>  -->
                                                         <div class="toolbar-filter">
                                                             <a class="add-vendors toolbar-link-filter" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Add Vendor">
                                                                 <img src="assets/images/table-icons/add.svg" class="img-fluid" alt="">
