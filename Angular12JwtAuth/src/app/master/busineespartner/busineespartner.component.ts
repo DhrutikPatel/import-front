@@ -9,11 +9,24 @@ export class BusineespartnerComponent implements OnInit {
 
   customer = true;
 
-  form: any = {
+  form1: any = {
     name : null,
     email: null,
-    mobilenumber: null
-  }
+    mobile: null 
+  } 
+ 
+  form: any = {
+   category: null,
+   subcategory: null,
+   name: null,
+   type:null,
+   state: null,
+   city: null,
+   zipcode: null,
+   currency: null,
+   quantity: null,
+   date: null
+}
 
   addVendor : any = {
     companyName: null,
@@ -53,14 +66,24 @@ export class BusineespartnerComponent implements OnInit {
   onCountryChange(event: any){
     console.log(event);
   }
-  
-  onSubmit(): void{
-    const {name,email,mobilenumber} = this.form;
-    console.log(this.form);  
+
+  onSubmitcustomer(): void{
+    const {name,email,mobilenumber} = this.form1;
+    console.log(this.form1);
   }
 
   onSubmitVendor(){
     console.log(this.addVendor);
   } 
+  
+  onSubmitvendor(): void{
+    const { category,subcategory,name,type,state,city,zipcode,currency,quantity,date} = this.form;
+    console.log(this.form);  
+  }
 
+  nonNeg(value : Number){
+    console.log(value);
+    return (value > 0);
+  }
+  
 }

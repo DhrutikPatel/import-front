@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortComponent implements OnInit {
 
-  constructor() { }
+  form: any = {
+     portname: null,
+     portcontactname: null,
+     portcontactnumber: null,
+     portcontactemail: null,
+     country: null,
+     state: null,
+     city: null,
+     pincode: null
+  }
 
+  constructor() { }
   ngOnInit(): void {
   }
 
+  onSubmitport(): void {
+    const {portname, portcontactname, portcontactnumber, portcontactemail,country, state, city}= this.form;
+    console.log(this.form);
+  }
 }
