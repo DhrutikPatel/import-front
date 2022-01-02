@@ -109,6 +109,22 @@ NOTE: This file contains all scripts for the actual Template.
         });        
     }; 
 
+    /*==========================================
+            :: Right Panel add
+    ==========================================*/ 
+    PUS.add = function () {
+        $(".add-panel").click(function(){
+            $(".right-panel-add").removeClass("add-active"); 
+        });
+        $(".toolbar-add a.add-link").click(function(){
+            $(".right-panel-add").addClass("add-active"); 
+        });    
+        $(".panel-overlay").click(function(){
+            $(".right-panel-add").removeClass("add-active"); 
+        });        
+    };
+
+    
 
     /*==========================================
             :: Datatable
@@ -136,15 +152,15 @@ NOTE: This file contains all scripts for the actual Template.
 	});
 
     
-    $(document).on("change", ":file", function() {
-        var input = $(this),
-        numFiles = input.get(0).files ? input.get(0).files.length : 1,
-        label = input
-        .val()
-        .replace(/\\/g, "/")
-        .replace(/.*\//, "");
-        input.trigger("fileselect", [numFiles, label]);
-    });
+    // $(document).on("change", ":file", function() {
+    //     var input = $(this),
+    //     numFiles = input.get(0).files ? input.get(0).files.length : 1,
+    //     label = input
+    //     .val()
+    //     .replace(/\\/g, "/")
+    //     .replace(/.*\//, "");
+    //     input.trigger("fileselect", [numFiles, label]);
+    // });
 
 	/*==========================================
     		:: Document Ready
@@ -155,7 +171,8 @@ NOTE: This file contains all scripts for the actual Template.
         PUS.hoverheader(), // hover header
         PUS.datatable(), // datatable
         PUS.filters(), // filters
-        PUS.customizetable() // Customize Table
+        PUS.customizetable(), // Customize Table
+        PUS.add() // add
 
         
         // Collapsible Card
@@ -275,8 +292,8 @@ NOTE: This file contains all scripts for the actual Template.
 })(jQuery);
 
 
-$(document).ready(function() {
-    $('.select2').select2(); //initialize 
-});
+// $(document).ready(function() {
+//     $('.select2').select2(); //initialize 
+// });
 
 

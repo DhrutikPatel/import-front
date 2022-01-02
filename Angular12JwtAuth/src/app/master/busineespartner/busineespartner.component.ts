@@ -9,6 +9,12 @@ export class BusineespartnerComponent implements OnInit {
 
   customer = true;
 
+  form: any = {
+    name : null,
+    email: null,
+    mobilenumber: null
+  }
+
   addVendor : any = {
     companyName: null,
     companyEmail: null,
@@ -47,11 +53,7 @@ export class BusineespartnerComponent implements OnInit {
   onCountryChange(event: any){
     console.log(event);
   }
- form: any = {
-   name : null,
-   email: null,
-   mobilenumber: null
- }
+  
   onSubmit(): void{
     const {name,email,mobilenumber} = this.form;
     console.log(this.form);  

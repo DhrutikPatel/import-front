@@ -613,3 +613,10 @@ span.tags {background: #8fcc14; padding: 2px 10px; display: inline-block; border
 
 .Departmentlist-checkbox .form-grid-list label{ display: flex; align-content: flex-start;}
 .Departmentlist-checkbox .form-grid-list label input[type="checkbox"] {margin-right: 10px; margin-top: 5px; }
+
+.po-documnet {
+    border: 1px solid rgb(255 0 0 / 18%);
+    padding: 15px;
+    border-radius: 10px;
+    background: rgb(255 0 0 / 4%);
+}
