@@ -46,7 +46,7 @@ export class PlanningComponent implements OnInit {
     vendorMobile: null,
     gstDocument: null
   };
-    
+
   constructor() {    
     // this.LogoPath = "./assets/Images/logo_icon.png"
     // this.NamePath = "./assets/Images/logo.png"
