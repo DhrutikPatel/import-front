@@ -189,6 +189,7 @@
     </div>
 
     <!-- Add Panel filter -->
+    <form #planningForm="ngForm" name="form" (ngSubmit)="onSubmitport()">
     <div class="right-panel-add right-panel-wrapper">
         <div class="panel-overlay"></div>
         <div class="right-panel w-20">
@@ -206,13 +207,14 @@
                 <div class="right-filters mCustomScrollbar">
                     <div class="row"> 
                         <div class="col-md-12"> 
-                            <div class="filters-scroll">
+                            <div class="filters-scroll">  
                                 <div class="row"> 
                                     <div class="col-md-12">
                                         <fieldset class="form-group">
                                             <label class="form-lbl">Port Name <span class="text-danger">*</span></label>
                                             <div class="headersearch"> 
-                                                <input type="text" class="form-control" placeholder="Port Name" required="required"> 
+                                                <input [(ngModel)]="form.portname" #portname="ngModel"  name ="portname" type="text" class="form-control" placeholder="Port Name" required="required"> 
+                                                <div *ngIf="portname.invalid && portname.touched" class="alert-danger ">Port Name is required</div>
                                             </div> 
                                         </fieldset> 
                                     </div>
@@ -220,7 +222,8 @@
                                         <fieldset class="form-group">
                                             <label class="form-lbl">Port Contact Name <span class="text-danger">*</span></label>
                                             <div class="headersearch"> 
-                                                <input type="text" class="form-control" placeholder="Port Contact Name" required="required"> 
+                                                <input  [(ngModel)]="form.portcontactname" #portcontactname="ngModel"  name ="portcontactname"  type="text" class="form-control" placeholder="Port Contact Name" required="required"> 
+                                                <div *ngIf="portcontactname.invalid && portcontactname.touched" class="alert-danger ">Port Contact Name is required</div>
                                             </div> 
                                         </fieldset> 
                                     </div>
@@ -228,7 +231,8 @@
                                         <fieldset class="form-group">
                                             <label class="form-lbl">Port Contact Number <span class="text-danger">*</span></label>
                                             <div class="headersearch"> 
-                                                <input type="text" class="form-control" placeholder="Port Contact Number" required="required"> 
+                                                <input [(ngModel)]="form.portcontactnumber" #portcontactnumber="ngModel"  name ="portcontactnumber"   type="text" class="form-control" placeholder="Port Contact Number" required="required">
+                                                <div *ngIf="portcontactnumber.invalid && portcontactnumber.touched" class="alert-danger ">Port Contact Number is required</div> 
                                             </div> 
                                         </fieldset> 
                                     </div>
@@ -236,7 +240,8 @@
                                         <fieldset class="form-group">
                                             <label class="form-lbl">Port Contact Email <span class="text-danger">*</span></label>
                                             <div class="headersearch"> 
-                                                <input type="text" class="form-control" placeholder="Port Contact Email" required="required"> 
+                                                <input [(ngModel)]="form.portcontactemail" #portcontactemail="ngModel"  name ="portcontactemail" type="text" class="form-control" placeholder="Port Contact Email" required="required"> 
+                                                <div *ngIf="portcontactemail.invalid && portcontactemail.touched" class="alert-danger ">Port Contact Email is required</div> 
                                             </div> 
                                         </fieldset> 
                                     </div>
@@ -244,7 +249,8 @@
                                         <fieldset class="form-group">
                                             <label class="form-lbl">Country <span class="text-danger">*</span></label>
                                             <div class="headersearch"> 
-                                                <input type="text" class="form-control" placeholder="Country" required="required"> 
+                                                <input [(ngModel)]="form.country" #country="ngModel"  name ="country" type="text" class="form-control" placeholder="Country" required="required"> 
+                                                <div *ngIf="country.invalid && country.touched" class="alert-danger ">Country is required</div> 
                                             </div> 
                                         </fieldset> 
                                     </div>
@@ -252,7 +258,8 @@
                                         <fieldset class="form-group">
                                             <label class="form-lbl">State <span class="text-danger">*</span></label>
                                             <div class="headersearch"> 
-                                                <input type="text" class="form-control" placeholder="State" required="required"> 
+                                                <input [(ngModel)]="form.state" #state="ngModel"  name ="state" type="text" class="form-control" placeholder="State" required="required"> 
+                                                <div *ngIf="state.invalid && state.touched" class="alert-danger ">State is required</div> 
                                             </div> 
                                         </fieldset> 
                                     </div>
@@ -260,7 +267,8 @@
                                         <fieldset class="form-group">
                                             <label class="form-lbl">City <span class="text-danger">*</span></label>
                                             <div class="headersearch"> 
-                                                <input type="text" class="form-control" placeholder="City" required="required"> 
+                                                <input [(ngModel)]="form.city" #city="ngModel"  name ="city" type="text" class="form-control" placeholder="City" required="required"> 
+                                                <div *ngIf="city.invalid && city.touched" class="alert-danger ">City is required</div> 
                                             </div> 
                                         </fieldset> 
                                     </div>
@@ -268,7 +276,8 @@
                                         <fieldset class="form-group">
                                             <label class="form-lbl">Pincode <span class="text-danger">*</span></label>
                                             <div class="headersearch"> 
-                                                <input type="text" class="form-control" placeholder="Pincode" required="required"> 
+                                                <input [(ngModel)]="form.pincode" #pincode="ngModel"  name ="pincode" type="text" class="form-control" placeholder="Pincode" required="required"> 
+                                                <div *ngIf="pincode.invalid && pincode.touched" class="alert-danger ">Pincode is required</div> 
                                             </div> 
                                         </fieldset> 
                                     </div> 
@@ -277,15 +286,15 @@
                         </div>
                         <div class="col-md-12 text-center mt-3"> 
                             <div class="d-flex justify-content-center align-items-center"> 
-                                <a class="button-style ml-2">Add Port</a>
+                                <button type="submit" class="button-style ml-2">Add Port</button>
                             </div>
                         </div>
                     </div>
                 </div>                
             </div>
         </div>
-    </div>
-
+    </div> 
+    </form>
     <!-- Right Panel Customize Table -->
     <!-- <div class="right-panel-customizetable right-panel-wrapper">
         <div class="panel-overlay"></div>
