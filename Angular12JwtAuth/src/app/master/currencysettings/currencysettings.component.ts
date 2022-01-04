@@ -7,6 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CurrencysettingsComponent implements OnInit {
 
+  form: any = {
+    countryname: null,
+    currenyname: null,
+    currencyfullnumber: null,
+    currencyshortcode: null,
+    currencysymbol : null
+  }  
+ 
+  onsubmitcurrencysettings(){
+    const {countryname, currenyname, currencyfullnumber,currencyshortcode, currencysymbol} = this.form;
+    console.log(this.form);
+  }
+  
   constructor() { }
 
   ngOnInit(): void {

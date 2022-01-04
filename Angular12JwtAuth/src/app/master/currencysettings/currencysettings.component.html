@@ -216,6 +216,7 @@
 
 
     <!-- Add Panel filter -->
+    <form  #currencysettingsForm="ngForm" name="form" (ngSubmit)="onsubmitcurrencysettings()">
     <div class="right-panel-add right-panel-wrapper">
     <div class="panel-overlay"></div>
     <div class="right-panel w-20">
@@ -239,9 +240,10 @@
                                     <fieldset class="form-group">
                                         <label class="form-lbl">Country Name <span class="text-danger">*</span></label>
                                         <div class="headersearch">  
-                                            <select name="" id="input" class="form-control form-select" required="required">
+                                            <select [(ngModel)]="form.countryname" #countryname="ngModel"  name ="countryname" id="input" class="form-control form-select" required="required">
                                                 <option value="">Select Country Name</option>
                                             </select>
+                                            <div *ngIf="countryname.invalid && countryname.touched" class="alert-danger ">Contact Name is required</div>
                                         </div> 
                                     </fieldset> 
                                 </div>
@@ -249,9 +251,10 @@
                                     <fieldset class="form-group">
                                         <label class="form-lbl">Currency Name <span class="text-danger">*</span></label> 
                                         <div class="headersearch"> 
-                                            <select name="" id="input" class="form-control form-select" required="required">
+                                            <select [(ngModel)]="form.currenyname" #currenyname="ngModel"  name ="currenyname" id="input" class="form-control form-select" required="required">
                                                 <option value="">Select Currency Name</option>
                                             </select>
+                                            <div *ngIf="currenyname.invalid && currenyname.touched" class="alert-danger ">Currency Name is required</div>
                                         </div> 
                                     </fieldset> 
                                 </div>
@@ -259,9 +262,10 @@
                                     <fieldset class="form-group">
                                         <label class="form-lbl">Currency Full Number <span class="text-danger">*</span></label> 
                                         <div class="headersearch"> 
-                                            <select name="" id="input" class="form-control form-select" required="required">
+                                            <select [(ngModel)]="form.currencyfullnumber" #currencyfullnumber="ngModel"  name ="currencyfullnumber"  name="" id="input" class="form-control form-select" required="required">
                                                 <option value="">Select Currency  Full Number</option>
                                             </select>
+                                            <div *ngIf="currencyfullnumber.invalid && currencyfullnumber.touched" class="alert-danger ">Currency Full Number is required</div>
                                         </div> 
                                     </fieldset> 
                                 </div>
@@ -269,19 +273,21 @@
                                     <fieldset class="form-group">
                                         <label class="form-lbl">Currency Short code <span class="text-danger">*</span></label>
                                         <div class="headersearch"> 
-                                            <select name="" id="input" class="form-control form-select" required="required">
-                                                <option value="">Select Currency  Short code</option>
+                                            <select [(ngModel)]="form.currencyshortcode" #currencyshortcode="ngModel"  name ="currencyshortcode"  name="" id="input" class="form-control form-select" required="required">
+                                                <option value="">Select Currency Short code</option>
                                             </select>
+                                            <div *ngIf="currencyshortcode.invalid && currencyshortcode.touched" class="alert-danger ">Currency Short code is required</div>
                                         </div> 
                                     </fieldset> 
                                 </div>
                                 <div class="col-md-12">
                                     <fieldset class="form-group">
-                                        <label class="form-lbl">Currency Symbole <span class="text-danger">*</span></label>
+                                        <label class="form-lbl">Currency Symbol <span class="text-danger">*</span></label>
                                         <div class="headersearch"> 
-                                            <select name="" id="input" class="form-control form-select" required="required">
-                                                <option value="">Select Country Symbole</option>
+                                            <select [(ngModel)]="form.currencysymbol" #currencysymbol="ngModel"  name ="currencysymbol"  name="" id="input" class="form-control form-select" required="required">
+                                                <option value="">Select Country Symbol</option>
                                             </select>
+                                            <div *ngIf="currencysymbol.invalid && currencysymbol.touched" class="alert-danger ">Country Symbolis required</div>
                                         </div> 
                                     </fieldset> 
                                 </div> 
@@ -290,7 +296,7 @@
                     </div>
                     <div class="col-md-12 text-center mt-3"> 
                         <div class="d-flex justify-content-center align-items-center"> 
-                            <a class="button-style ml-2"> Add Currency</a>
+                            <button type="submit" class="button-style ml-2"> Add Currency</button>
                         </div>
                     </div>
                 </div>
@@ -298,6 +304,7 @@
         </div>
     </div>
     </div>  
+    </form>
 
     <!-- Right Panel Customize Table -->
     <!-- <div class="right-panel-customizetable right-panel-wrapper">
