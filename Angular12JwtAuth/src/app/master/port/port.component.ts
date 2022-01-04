@@ -25,5 +25,6 @@ export class PortComponent implements OnInit {
   onSubmitport(): void {
     const {portname, portcontactname, portcontactnumber, portcontactemail,country, state, city}= this.form;
     console.log(this.form);
-  }
+  } 
+  
 }

@@ -63,7 +63,7 @@
                                             <div class="form-grid-list">
                                                 <fieldset class="form-group ">
                                                     <label class="form-lbl">Select Category  <span class="text-danger">*</span></label>
-                                                    <select [(ngModel)]="form.category" #category="ngModel"  name="category"  name="" class="form-control form-select" required>
+                                                    <select [(ngModel)]="form.category" #category="ngModel"  name="category"  name="" class="form-control select2 select2-hidden-accessible" required>
                                                         <option value="" selected="">Select Category</option>
                                                         <option value="Food">Food</option>
                                                         <option value="Electronic">Electronic</option>
@@ -75,7 +75,7 @@
                                             <div class="form-grid-list">
                                                 <fieldset class="form-group">
                                                     <label class="form-lbl">Select Sub Category  <span class="text-danger">*</span></label>
-                                                    <select  [(ngModel)]="form.subcategory" #subcategory="ngModel"  name="subcategory"   class="form-control form-select" required>
+                                                    <select  [(ngModel)]="form.subcategory" #subcategory="ngModel"  name="subcategory"   class="form-control select2 select2-hidden-accessible" required>
                                                         <option >Select Sub Category</option>
                                                         <option value="Mango">Mango </option>
                                                         <option value="Orange">Orange</option>
@@ -86,13 +86,13 @@
                                             </div> 
                                             <div class="form-grid-list">
                                                 <div class="form-group">
-                                                    <label class="form-lbl" for=""> Product Name <span class="text-danger">*</span></label>
-                                                    <input [(ngModel)]="form.name" #name="ngModel"  name ="name" type="text" class="form-control" placeholder="Name" required>
+                                                    <label class="form-lbl" for="">Product Name <span class="text-danger">*</span></label>
+                                                    <input [(ngModel)]="form.name" #name="ngModel"  name ="name" type="text" class="form-control " placeholder="Name" required>
                                                     <div *ngIf="name.invalid && name.touched" class="alert-danger ">Name is required</div>
-                                                </div> 
+                                                </div>
                                             </div> 
                                             <div class="form-grid-list">
-                                                <fieldset class="form-group ">
+                                                <fieldset class="form-group"> 
                                                     <label class="form-lbl">Select Vendor  <span class="text-danger">*</span></label>
                                                     <div class="select-vendors">
                                                         <select  [(ngModel)]="form.type" #type="ngModel"  name="type"  class="form-control form-select select2 select2-hidden-accessible" required>
@@ -172,7 +172,7 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="text-center mt-3">
-                                            <button type="submit" routerLink="/import-vendor" class="button-style ">Send</button>
+                                            <button type="submit" class="button-style ">Send</button>
                                         </div>
                                     </div>
                                 </div>
@@ -350,7 +350,7 @@
                                                         <input [(ngModel)]="addVendor.ieCode" #ieCode="ngModel" name="ieCode" type="text" class="form-control" placeholder="Enter IE Code" required> 
                                                         <div *ngIf="ieCode.invalid && ieCode.touched" class="alert-danger ">IE code is required</div>
                                                     </div>
-                                                </fieldset> 
+                                                </fieldset>  
                                             </div> 
                                             <div class="form-grid-list">
                                                 <fieldset class="form-group">
@@ -387,7 +387,7 @@
                                                 </fieldset> 
                                             </div>
                                             <div class="form-grid-list">
-                                                <fieldset class="form-group">
+                                                <fieldset class="form-group">  
                                                     <label class="form-lbl">Email <span class="text-danger">*</span></label>
                                                     <div class="headersearch"> 
                                                         <input [(ngModel)]="addVendor.vendorEmail" #vendorEmail="ngModel" name="vendorEmail" type="text" class="form-control" placeholder="Enter Email" required> 

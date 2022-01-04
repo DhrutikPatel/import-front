@@ -67,9 +67,10 @@ export class BusineespartnerComponent implements OnInit {
     console.log(event);
   }
 
+
   onSubmitcustomer(): void{
     const {name,email,mobilenumber} = this.form1;
-    console.log(this.form1);
+    console.log(this.form1);  
   }
 
   onSubmitVendor(){

@@ -23,7 +23,7 @@ import { CurrencysettingsComponent } from './master/currencysettings/currencyset
 import { BusineespartnerComponent } from './master/busineespartner/busineespartner.component';
 import { BankimportComponent } from './imports/bankimport/bankimport.component';
 import { DocumentComponent } from './master/document/document.component';
-
+import {UsermanagementComponent} from './master/usermanagement/usermanagement.component';
 // ------------------------------------------------------IMPORT-----------------------------------------------------------//
 import { PlanningComponent } from './imports/planning/planning.component';
 import { VendorComponent } from './imports/vendor/vendor.component';
@@ -41,6 +41,7 @@ import { ThirdpartyinspectionComponent } from './imports/thirdpartyinspection/th
 import { VesseltrackingComponent } from './vesseltracking/vesseltracking.component';
 import {RolemanagementComponent } from './rolemanagement/rolemanagement.component';
 import {ClientsComponent} from './clients/clients.component';
+import { CertificateComponent } from './certificate/certificate.component';
 // import { AddformComponent } from './addform/addform.component';
 // import { TableComponent } from './table/table.component';
 
@@ -58,6 +59,7 @@ const routes: Routes = [
   { path: 'verifyMobile', component: VerifyMobileComponent},
   { path: 'verifyEmail', component: VerifyEmailComponent},  
   { path: 'membership', component: MembershipcomponentComponent},
+  { path:'certificate', component: CertificateComponent},
   // ------------------------------------------------------MASTER ROUTERS-----------------------------------------------------------//
   {path: 'master-companysetup', component: CompanysetupComponent},
   {path: 'master-license',component: LicenseComponent},
@@ -68,6 +70,7 @@ const routes: Routes = [
   {path: 'master-document', component: DocumentComponent},
   {path: 'master-rolemanagement',component: RolemanagementComponent },
   {path: 'master-clients', component: ClientsComponent},
+  {path: 'master-usermanagement', component: UsermanagementComponent},
   // ------------------------------------------------------IMPORT ROUTERS-----------------------------------------------------------//
   {path: 'import-planning', component: PlanningComponent},
   {path: 'import-vendor', component: VendorComponent},
